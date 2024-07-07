@@ -135,4 +135,15 @@ return {
       vim.keymap.set('i', '<A-f>', neocodeium.accept)
     end,
   },
+  {
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    priority = 1001, -- Make sure to load this before all the other start plugins.
+    init = function()
+      vim.cmd.colorscheme 'catppuccin-frappe'
+
+      -- You can configure highlights by doing something like:
+      vim.cmd.hi 'Comment gui=none'
+    end,
+  },
 }
